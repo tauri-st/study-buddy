@@ -49,3 +49,4 @@ thread_messages = client.beta.threads.messages.list(
 message_for_user = thread_messages.data[0].content[0].text.value
 
 #TODO: display the message to the user
+print("Assistant: " + message_for_user)
