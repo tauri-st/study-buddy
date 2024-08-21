@@ -17,6 +17,11 @@ thread = client.beta.threads.create()
 user_input = input("You: ")
 
 #TODO: use the prompt to create a message within the thread
+message = client.beta.threads.messages.create(
+    thread_id = thread.id,
+    role = "user",
+    content = user_input
+)
 
 #TODO: create a run
 
