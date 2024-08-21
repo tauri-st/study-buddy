@@ -35,11 +35,11 @@ while True:
     #add a one-second delary between each run status check
     time.sleep(1)
     #check the status of the run
-    run_status = client.beta.threads.runs.retrieve(
+    run_check = client.beta.threads.runs.retrieve(
         thread_id = thread.id,
         run_id = run.id
     )
-    if run.status == "completed":
+    if run_check.status == "completed":
         break
 
 #TODO: extract the most recent message content when the run is completed
