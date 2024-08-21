@@ -14,6 +14,7 @@ assistant = client.beta.assistants.create(
 thread = client.beta.threads.create()
 
 #TODO: prompt the user for input
+user_input = input("You: ")
 
 #TODO: use the prompt to create a message within the thread
 
