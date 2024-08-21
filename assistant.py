@@ -1,4 +1,5 @@
 from openai import OpenAI
+import time
 
 client = OpenAI()
 
@@ -24,9 +25,27 @@ message = client.beta.threads.messages.create(
 )
 
 #TODO: create a run
+run = client.beta.threads.runs.create(
+    thread_id = thread.id,
+    assistant_id = assistant.id
+)
 
-#TODO: monitor the run status
+#TODO: monitor the run status at regular intervals until the status of the run is complete
+while True:
+    #add a one-second delary between each run status check
+    time.sleep(1)
+    #check the status of the run
+    run_status = client.beta.threads.runs.retrieve(
+        thread_id = thread.id,
+        run_id = run.id
+    )
+    if run.status == "completed":
+        break
 
 #TODO: extract the most recent message content when the run is completed
+thread_messages = client.beta.threads.messages.list(
+    thread_id = thread.id
+)
+message_for_user = thread_messages.data[0].content[0].text.value
 
 #TODO: display the message to the user
