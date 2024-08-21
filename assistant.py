@@ -11,3 +11,4 @@ assistant = client.beta.assistants.create(
 )
 
 #create a thread
+thread = client.beta.threads.create()
