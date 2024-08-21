@@ -12,3 +12,15 @@ assistant = client.beta.assistants.create(
 
 #create a thread
 thread = client.beta.threads.create()
+
+#TODO: prompt the user for input
+
+#TODO: use the prompt to create a message within the thread
+
+#TODO: create a run
+
+#TODO: monitor the run status
+
+#TODO: extract the most recent message content when the run is completed
+
+#TODO: display the message to the user
