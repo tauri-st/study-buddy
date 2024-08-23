@@ -24,23 +24,24 @@ message = client.beta.threads.messages.create(
     content = user_input
 )
 
-#create a run
-run = client.beta.threads.runs.create(
-    thread_id = thread.id,
-    assistant_id = assistant.id
-)
-
-#monitor the run status at regular intervals until the status of the run is complete
-while True:
-    #add a one-second delary between each run status check
-    time.sleep(1)
-    #check the status of the run
-    run_check = client.beta.threads.runs.retrieve(
-        thread_id = thread.id,
-        run_id = run.id
+def process_run(thread_id, assistant_id):
+    #create a run
+    new_run = client.beta.threads.runs.create(
+        thread_id = thread_id,
+        assistant_id = assistant_id
     )
-    if run_check.status == "completed":
-        break
+
+    #monitor the run status at regular intervals until the status of the run is complete
+    while True:
+        #add a one-second delary between each run status check
+        time.sleep(1)
+        #check the status of the run
+        run_check = client.beta.threads.runs.retrieve(
+            thread_id = thread_id,
+            run_id = new_run.id
+        )
+        if run_check.status == "completed":
+            break
 
 #extract the most recent message content when the run is completed
 thread_messages = client.beta.threads.messages.list(
