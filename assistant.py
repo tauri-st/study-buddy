@@ -58,3 +58,6 @@ while True:
 
         #display the message to the user
         print("\nAssistant: " + thread_messages.data[0].content[0].text.value + "\n")
+    
+    if run.status in ["cancelled", "failed", "expired"]:
+        print("\nAssistant: An error has occurred, please try again.\n")
