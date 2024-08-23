@@ -11,19 +11,6 @@ assistant = client.beta.assistants.create(
     tools = []
 )
 
-#create a thread
-thread = client.beta.threads.create()
-
-#prompt the user for input
-user_input = input("You: ")
-
-#use the prompt to create a message within the thread
-message = client.beta.threads.messages.create(
-    thread_id = thread.id,
-    role = "user",
-    content = user_input
-)
-
 #check status details
 def process_run(thread_id, assistant_id):
     #create a run
@@ -43,6 +30,19 @@ def process_run(thread_id, assistant_id):
         )
         if run_check.status in ["cancelled", "failed", "completed", "expired"]:
             return run_check
+
+#create a thread
+thread = client.beta.threads.create()
+
+#prompt the user for input
+user_input = input("You: ")
+
+#use the prompt to create a message within the thread
+message = client.beta.threads.messages.create(
+    thread_id = thread.id,
+    role = "user",
+    content = user_input
+)
 
 #extract the most recent message content when the run is completed
 thread_messages = client.beta.threads.messages.list(
