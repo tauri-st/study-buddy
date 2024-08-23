@@ -49,11 +49,12 @@ while True:
     )
 
     run = process_run(thread.id, assistant.id)
-#extract the most recent message content when the run is completed
-thread_messages = client.beta.threads.messages.list(
-    thread_id = thread.id
-)
-message_for_user = thread_messages.data[0].content[0].text.value
 
-#display the message to the user
-print("Assistant: " + message_for_user)
+    if run.status == "completed":
+        #extract the most recent message content when the run is completed
+        thread_messages = client.beta.threads.messages.list(
+            thread_id = thread.id
+        )
+
+        #display the message to the user
+        print("\nAssistant: " + thread_messages.data[0].content[0].text.value + "\n")
