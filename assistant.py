@@ -34,16 +34,21 @@ def process_run(thread_id, assistant_id):
 #create a thread
 thread = client.beta.threads.create()
 
-#prompt the user for input
-user_input = input("You: ")
+while True:
+    #prompt the user for input
+    user_input = input("You: ")
 
-#use the prompt to create a message within the thread
-message = client.beta.threads.messages.create(
-    thread_id = thread.id,
-    role = "user",
-    content = user_input
-)
+    if user_input.lower() == "exit":
+        exit()
 
+    #use the prompt to create a message within the thread
+    message = client.beta.threads.messages.create(
+        thread_id = thread.id,
+        role = "user",
+        content = user_input
+    )
+
+    run = process_run(thread.id, assistant.id)
 #extract the most recent message content when the run is completed
 thread_messages = client.beta.threads.messages.list(
     thread_id = thread.id
