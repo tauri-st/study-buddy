@@ -24,6 +24,7 @@ message = client.beta.threads.messages.create(
     content = user_input
 )
 
+#check status details
 def process_run(thread_id, assistant_id):
     #create a run
     new_run = client.beta.threads.runs.create(
@@ -40,8 +41,8 @@ def process_run(thread_id, assistant_id):
             thread_id = thread_id,
             run_id = new_run.id
         )
-        if run_check.status == "completed":
-            break
+        if run_check.status in ["cancelled", "failed", "completed", "expired"]:
+            return run_check
 
 #extract the most recent message content when the run is completed
 thread_messages = client.beta.threads.messages.list(
