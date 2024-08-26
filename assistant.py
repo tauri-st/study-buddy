@@ -46,8 +46,6 @@ def process_run(thread_id, assistant_id):
 def log_run(run_status):
       if run_status in ["cancelled", "failed", "completed", "expired"]:
           log.error("\nDate: " + str(datetime.datetime.now()) + "\nRun error: " + str(run_status))
-        
-log_run(run_check)
 
 #create a thread
 thread = client.beta.threads.create()
@@ -75,6 +73,8 @@ while True:
     )
 
     run = process_run(thread.id, assistant.id)
+
+    log_run(run.status)
 
     if run.status == "completed":
         #extract the most recent message content when the run is completed
