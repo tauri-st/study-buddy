@@ -26,6 +26,7 @@ def status_message(run_status):
         thread_messages = client.beta.threads.messages.list(
             thread_id = thread.id
         )
+        message_for_user = thread_messages.data[0].content[0].text.value
 
         #display the message to the user
         print("\nAssistant: " + thread_messages.data[0].content[0].text.value + "\n")
@@ -41,8 +42,6 @@ def status_message(run_status):
     thread_messages = client.beta.threads.messages.list(
     thread_id = thread.id
     )
- 
-    message_for_user = thread_messages.data[0].content[0].text.value
  
     print("\nAssistant: " + message_for_user + "\n")
     
