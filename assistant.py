@@ -34,6 +34,8 @@ def process_run(thread_id, assistant_id):
 #create a thread
 thread = client.beta.threads.create()
 
+user_input = ""
+
 while True:
     if (user_input == ""):
         user_input = input("Hello! Let's chat! You can type `exit` to exit out anytime. What's your name? ")
