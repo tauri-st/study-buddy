@@ -63,6 +63,7 @@ while True:
         user_input = input("You: ")
 
     if user_input.lower() == "exit":
+        print("Bye bye now, have a good one!")
         exit()
 
     #use the prompt to create a message within the thread
