@@ -19,6 +19,24 @@ assistant = client.beta.assistants.create(
     tools = []
 )
 
+#TODO: Return appropriate response based on status value
+def status_message(run_status):
+    #check the status of the run
+    run_check = client.beta.threads.runs.retrieve(
+        thread_id = thread_id,
+        run_id = new_run.id
+    )
+    if run_check.status in ["cancelled", "failed", "completed", "expired"]:
+        return run_check
+    #TODO: Use this old code in the function refactor
+    thread_messages = client.beta.threads.messages.list(
+    thread_id = thread.id
+    )
+ 
+    message_for_user = thread_messages.data[0].content[0].text.value
+ 
+    print("\nAssistant: " + message_for_user + "\n")
+
 #check status details
 def process_run(thread_id, assistant_id):
     #create a run
