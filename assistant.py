@@ -5,9 +5,9 @@ import logging
 import datetime
 
 #Write the log by creating a module level logger to do the logging
-log = logging.getLogger("chatbot_token_count")
+log = logging.getLogger("assistant_token_count")
 #configure log file
-logging.basicConfig(filename='chatbot_token_count.log', level=logging.INFO)
+logging.basicConfig(filename='assistant_token_count.log', level=logging.INFO)
 
 client = OpenAI()
 
