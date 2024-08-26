@@ -23,6 +23,7 @@ def process_run(thread_id, assistant_id):
     while True:
         #add a one-second delary between each run status check
         time.sleep(1)
+        print("Thinking...")
         #check the status of the run
         run_check = client.beta.threads.runs.retrieve(
             thread_id = thread_id,
