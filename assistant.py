@@ -19,6 +19,8 @@ def process_run(thread_id, assistant_id):
         assistant_id = assistant_id
     )
 
+    phrases = ["Thinking", "Pondering", "Dotting the i's", "Achieving world peace"]
+
     #monitor the run status at regular intervals until the status of the run is complete
     while True:
         #add a one-second delary between each run status check
