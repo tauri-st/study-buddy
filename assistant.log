@@ -6,3 +6,28 @@ INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_lbQfn79qED
 ERROR:assistant:
 Date: 2024-08-26 16:07:48.389325
 Run error: completed
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/assistants "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/runs "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/runs/run_Kwzj9yLDxKpuOzmx9PpC3eaN "HTTP/1.1 200 OK"
+ERROR:assistant:
+Date: 2024-08-26 16:09:47.904450
+Run error: completed
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/runs "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/runs/run_TlPXy7Nfuxxhe7IYL4qrb2gW "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/runs/run_TlPXy7Nfuxxhe7IYL4qrb2gW "HTTP/1.1 200 OK"
+ERROR:assistant:
+Date: 2024-08-26 16:09:57.005629
+Run error: completed
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/runs "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/runs/run_QvL7XtHMjmnY9MPbQzbbHjvP "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/runs/run_QvL7XtHMjmnY9MPbQzbbHjvP "HTTP/1.1 200 OK"
+ERROR:assistant:
+Date: 2024-08-26 16:10:22.192903
+Run error: completed
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_1i97JagPjpOFIp8j5f2FbhkK/messages "HTTP/1.1 200 OK"
