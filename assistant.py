@@ -59,7 +59,7 @@ def process_run(thread_id, assistant_id):
 #log error if status is cancelled, failed, or expired
 def log_run(run_status):
       if run_status in ["cancelled", "failed", "completed", "expired"]:
-          log.error("\nDate: " + str(datetime.datetime.now()) + "\nRun error: " + str(run_status))
+          log.error("\nDate: " + str(datetime.datetime.now()) + "\nRun status: " + str(run_status))
 
 #create a thread
 thread = client.beta.threads.create()
