@@ -91,4 +91,6 @@ while True:
 
     log_run(run.status)
 
+    message = status_message(run.status)
+
     print("\nAssistant: " + message + "\n")
