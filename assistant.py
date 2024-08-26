@@ -42,7 +42,7 @@ def process_run(thread_id, assistant_id):
         if run_check.status in ["cancelled", "failed", "completed", "expired"]:
             return run_check
         
-#TODO: Accept run status as an arguement and log error if status is cancelled, failed, or expired
+#log error if status is cancelled, failed, or expired
 def log_run(run_status):
       if run_status in ["cancelled", "failed", "completed", "expired"]:
           log.error("\nDate: " + str(datetime.datetime.now()) + "\nRun error: " + str(run_status))
