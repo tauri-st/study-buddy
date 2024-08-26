@@ -21,11 +21,20 @@ assistant = client.beta.assistants.create(
 
 #TODO: Return appropriate response based on status value
 def status_message(run_status):
+    if run.status == "completed":
+        #extract the most recent message content when the run is completed
+        thread_messages = client.beta.threads.messages.list(
+            thread_id = thread.id
+        )
+
+        #display the message to the user
+        print("\nAssistant: " + thread_messages.data[0].content[0].text.value + "\n")
     #check the status of the run
     run_check = client.beta.threads.runs.retrieve(
         thread_id = thread_id,
         run_id = new_run.id
     )
+
     if run_check.status in ["cancelled", "failed", "completed", "expired"]:
         return run_check
     #TODO: Use this old code in the function refactor
@@ -36,6 +45,9 @@ def status_message(run_status):
     message_for_user = thread_messages.data[0].content[0].text.value
  
     print("\nAssistant: " + message_for_user + "\n")
+    
+    if run.status in ["cancelled", "failed", "expired"]:
+        print("\nAssistant: An error has occurred, please try again.\n")
 
 #check status details
 def process_run(thread_id, assistant_id):
@@ -94,15 +106,3 @@ while True:
     run = process_run(thread.id, assistant.id)
 
     log_run(run.status)
-
-    if run.status == "completed":
-        #extract the most recent message content when the run is completed
-        thread_messages = client.beta.threads.messages.list(
-            thread_id = thread.id
-        )
-
-        #display the message to the user
-        print("\nAssistant: " + thread_messages.data[0].content[0].text.value + "\n")
-    
-    if run.status in ["cancelled", "failed", "expired"]:
-        print("\nAssistant: An error has occurred, please try again.\n")
