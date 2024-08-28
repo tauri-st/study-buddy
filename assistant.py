@@ -11,6 +11,12 @@ logging.basicConfig(filename='assistant.log', level=logging.INFO)
 
 client = OpenAI()
 
+#upload file for assistants
+curriculum_knowledge = client.files.create(
+    file = open("knowledge/OpenAIChatCompletionsAPICheatsheet.pdf", "rb"),
+    purpose = "assistants"
+)
+
 #create assistant object
 assistant = client.beta.assistants.create(
     name = "Study Buddy",
