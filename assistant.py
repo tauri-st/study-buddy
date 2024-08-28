@@ -12,6 +12,8 @@ logging.basicConfig(filename='assistant.log', level=logging.INFO)
 client = OpenAI()
 
 #upload file for assistants
+#rb stands for "read" "binary"
+#open() returns a file object
 curriculum_knowledge = client.files.create(
     file = open("knowledge/OpenAIChatCompletionsAPICheatsheet.pdf", "rb"),
     purpose = "assistants"
