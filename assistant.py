@@ -14,20 +14,28 @@ client = OpenAI()
 #upload file for assistants
 #rb stands for "read" "binary"
 #open() returns a file object
-curriculum_knowledge = client.files.create(
-    file = open("knowledge/OpenAIChatCompletionsAPICheatsheet.pdf", "rb"),
-    purpose = "assistants"
-)
+#curriculum_knowledge = client.files.create(
+    #file = open("knowledge/OpenAIChatCompletionsAPICheatsheet.pdf", "rb"),
+    #purpose = "assistants"
+#)
 
-print(curriculum_knowledge)
+#print(curriculum_knowledge)
 
-# #create assistant object
+#create assistant object, with file ids passed to it
 assistant = client.beta.assistants.retrieve(
-    assistant_id = "asst_ndwvfyrmD9ACUGBp4o94D3pw"
+    assistant_id = "asst_ndwvfyrmD9ACUGBp4o94D3pw",
 )
 
 #print(assistant)
 #exit()
+
+assistant = client.beta.assistants.update(
+    assistant_id = assistant.id,
+    file_ids=[
+        "file-rEniBYpngrwuuw2TxtFipWPq",
+        "file-83ZZjGbBVxyV19FDqb4fIwn7"
+    ]
+)
 
 assistant_files = client.beta.assistants.files.list(
     "asst_ndwvfyrmD9ACUGBp4o94D3pw"
