@@ -26,7 +26,14 @@ assistant = client.beta.assistants.retrieve(
     assistant_id = "asst_ndwvfyrmD9ACUGBp4o94D3pw"
 )
 
-print(assistant)
+#print(assistant)
+#exit()
+
+assistant_files = client.beta.assistants.files.list(
+    "asst_ndwvfyrmD9ACUGBp4o94D3pw"
+)
+
+print(assistant_files)
 exit()
 
 # #Return appropriate response based on status value
