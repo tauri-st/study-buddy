@@ -23,10 +23,7 @@ print(curriculum_knowledge)
 
 # #create assistant object
 assistant = client.beta.assistants.retrieve(
-    name = "Study Buddy",
-    model = "gpt-3.5-turbo",
-    instructions = "You are a study partner for students who are newer to technology. When you answer prompts, do so with simple language suitable for someone learning fundamental concepts.",
-    tools = []
+    assistant_id = "asst_ndwvfyrmD9ACUGBp4o94D3pw"
 )
 
 # #Return appropriate response based on status value
