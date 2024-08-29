@@ -26,6 +26,9 @@ assistant = client.beta.assistants.retrieve(
     assistant_id = "asst_ndwvfyrmD9ACUGBp4o94D3pw"
 )
 
+print(assistant)
+exit()
+
 # #Return appropriate response based on status value
 # def status_message(run_status):
 #     if run_status == "completed":
