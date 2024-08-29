@@ -22,12 +22,12 @@ curriculum_knowledge = client.files.create(
 print(curriculum_knowledge)
 
 # #create assistant object
-# assistant = client.beta.assistants.create(
-#     name = "Study Buddy",
-#     model = "gpt-3.5-turbo",
-#     instructions = "You are a study partner for students who are newer to technology. When you answer prompts, do so with simple language suitable for someone learning fundamental concepts.",
-#     tools = []
-# )
+assistant = client.beta.assistants.retrieve(
+    name = "Study Buddy",
+    model = "gpt-3.5-turbo",
+    instructions = "You are a study partner for students who are newer to technology. When you answer prompts, do so with simple language suitable for someone learning fundamental concepts.",
+    tools = []
+)
 
 # #Return appropriate response based on status value
 # def status_message(run_status):
