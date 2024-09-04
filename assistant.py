@@ -36,12 +36,12 @@ assistant = client.beta.assistants.update(
     tool_resources={"file_search": {"vector_store_ids": ["vs_k2nCdJ1xhYkJKkLAU9H7nRx2"]}},
 )
 
-assistant_files = client.beta.assistants.files.list(
-    "asst_ndwvfyrmD9ACUGBp4o94D3pw"
-)
+#assistant_files = client.beta.assistants.files.list(
+    #"asst_ndwvfyrmD9ACUGBp4o94D3pw"
+#)
 
-print(assistant_files)
-exit()
+#print(assistant_files)
+#exit()
 
 # #Return appropriate response based on status value
 # def status_message(run_status):
