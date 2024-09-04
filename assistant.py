@@ -3,6 +3,9 @@ import time
 import random
 import logging
 import datetime
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 #Write the log by creating a module level logger to do the logging
 log = logging.getLogger("assistant")
@@ -124,20 +127,30 @@ while True:
     # Use the create and poll SDK helper to create a run and poll the status of
     # the run until it's in a terminal state.
 
-    run = client.beta.threads.runs.create_and_poll(
-        thread_id=thread.id, assistant_id=assistant.id
-    )
+    #run = client.beta.threads.runs.create_and_poll(
+        #thread_id=thread.id, assistant_id=assistant.id
+    #)
 
-    messages = list(client.beta.threads.messages.list(thread_id=thread.id, run_id=run.id))
+    #messages = list(client.beta.threads.messages.list(thread_id=thread.id, run_id=run.id))
 
-    message_content = messages[0].content[0].text
-    annotations = message_content.annotations
-    citations = []
-    for index, annotation in enumerate(annotations):
-        message_content.value = message_content.value.replace(annotation.text, f"[{index}]")
-        if file_citation := getattr(annotation, "file_citation", None):
-            cited_file = client.files.retrieve(file_citation.file_id)
-            citations.append(f"[{index}] {cited_file.filename}")
+    #message_content = messages[0].content[0].text
+    #annotations = message_content.annotations
+    #annotations = message.annotations
+    #citations = []
+    #for index, annotation in enumerate(annotations):
+        #message.value = message.value.replace(annotation.text, f"[{index}]")
+        #if file_citation := getattr(annotation, "file_citation", None):
+            #cited_file = client.files.retrieve(file_citation.file_id)
+            #citations.append(f"[{index}] {cited_file.filename}")
 
-    print(message_content.value)
-    print("\n".join(citations))
+    #print(message.value)
+    #print("\n".join(citations))
+    #citations = []
+    #for index, annotation in enumerate(annotations):
+        #message.value = message.value.replace(annotation.text, f"[{index}]")
+        #if file_citation := getattr(annotation, "file_citation", None):
+            #cited_file = client.files.retrieve(file_citation.file_id)
+            #citations.append(f"[{index}] {cited_file.filename}")
+
+    #print(message.value)
+    #print("\n".join(citations))

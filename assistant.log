@@ -150,3 +150,84 @@ INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_8bO9y6JQkY
 INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_8bO9y6JQkYM0LQm3NdNs9kBW/runs/run_ZsHOfWn6jKFH5K7mGsJWiRBv "HTTP/1.1 200 OK"
 INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_8bO9y6JQkYM0LQm3NdNs9kBW/messages?run_id=run_ZsHOfWn6jKFH5K7mGsJWiRBv "HTTP/1.1 200 OK"
 INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_8bO9y6JQkYM0LQm3NdNs9kBW/messages?run_id=run_ZsHOfWn6jKFH5K7mGsJWiRBv&after=msg_RIIq5pqNR9YzdqpVwEy7ihym "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_MUFyvQfwg2JiDaWdJvytaeqD/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_MUFyvQfwg2JiDaWdJvytaeqD/runs "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_MUFyvQfwg2JiDaWdJvytaeqD/runs/run_VOGNefK3eXTQQ650ncJaLeXV "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_MUFyvQfwg2JiDaWdJvytaeqD/runs/run_VOGNefK3eXTQQ650ncJaLeXV "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_MUFyvQfwg2JiDaWdJvytaeqD/runs/run_VOGNefK3eXTQQ650ncJaLeXV "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_MUFyvQfwg2JiDaWdJvytaeqD/runs/run_VOGNefK3eXTQQ650ncJaLeXV "HTTP/1.1 200 OK"
+ERROR:assistant:
+Date: 2024-09-04 16:13:51.589427
+Run status: completed
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_MUFyvQfwg2JiDaWdJvytaeqD/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_SZ29e2Z5ZR4p4h65uG8zzLhf/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_SZ29e2Z5ZR4p4h65uG8zzLhf/runs "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_SZ29e2Z5ZR4p4h65uG8zzLhf/runs/run_tWQxYY5oSXhSirXH2pVygdKJ "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_SZ29e2Z5ZR4p4h65uG8zzLhf/runs/run_tWQxYY5oSXhSirXH2pVygdKJ "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_SZ29e2Z5ZR4p4h65uG8zzLhf/runs/run_tWQxYY5oSXhSirXH2pVygdKJ "HTTP/1.1 502 Bad Gateway"
+INFO:openai._base_client:Retrying request to /threads/thread_SZ29e2Z5ZR4p4h65uG8zzLhf/runs/run_tWQxYY5oSXhSirXH2pVygdKJ in 0.979414 seconds
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_SZ29e2Z5ZR4p4h65uG8zzLhf/runs/run_tWQxYY5oSXhSirXH2pVygdKJ "HTTP/1.1 200 OK"
+ERROR:assistant:
+Date: 2024-09-04 16:18:01.829738
+Run status: completed
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_SZ29e2Z5ZR4p4h65uG8zzLhf/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_jm42kwsze31ingMXhqmOjDk1/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_jm42kwsze31ingMXhqmOjDk1/runs "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_jm42kwsze31ingMXhqmOjDk1/runs/run_lEWMICts422OkFLGraM8mrjQ "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_jm42kwsze31ingMXhqmOjDk1/runs/run_lEWMICts422OkFLGraM8mrjQ "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_jm42kwsze31ingMXhqmOjDk1/runs/run_lEWMICts422OkFLGraM8mrjQ "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_jm42kwsze31ingMXhqmOjDk1/runs/run_lEWMICts422OkFLGraM8mrjQ "HTTP/1.1 200 OK"
+ERROR:assistant:
+Date: 2024-09-04 16:20:09.412248
+Run status: completed
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_jm42kwsze31ingMXhqmOjDk1/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_IJRnZp6cbbss1hJAl3XCS8qS/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_IJRnZp6cbbss1hJAl3XCS8qS/runs "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_IJRnZp6cbbss1hJAl3XCS8qS/runs/run_9X4cSzdsvrZ70Lb5hgmyR9Z1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_IJRnZp6cbbss1hJAl3XCS8qS/runs/run_9X4cSzdsvrZ70Lb5hgmyR9Z1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_IJRnZp6cbbss1hJAl3XCS8qS/runs/run_9X4cSzdsvrZ70Lb5hgmyR9Z1 "HTTP/1.1 200 OK"
+ERROR:assistant:
+Date: 2024-09-04 16:21:56.633836
+Run status: completed
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_IJRnZp6cbbss1hJAl3XCS8qS/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_BuXhyaAUOV4dWUsxfoMHlDnK/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_BuXhyaAUOV4dWUsxfoMHlDnK/runs "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_BuXhyaAUOV4dWUsxfoMHlDnK/runs/run_14vt6kWfMkpNbDbn9Hg7uwYz "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_BuXhyaAUOV4dWUsxfoMHlDnK/runs/run_14vt6kWfMkpNbDbn9Hg7uwYz "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_BuXhyaAUOV4dWUsxfoMHlDnK/runs/run_14vt6kWfMkpNbDbn9Hg7uwYz "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_BuXhyaAUOV4dWUsxfoMHlDnK/runs/run_14vt6kWfMkpNbDbn9Hg7uwYz "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_BuXhyaAUOV4dWUsxfoMHlDnK/runs/run_14vt6kWfMkpNbDbn9Hg7uwYz "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_BuXhyaAUOV4dWUsxfoMHlDnK/runs/run_14vt6kWfMkpNbDbn9Hg7uwYz "HTTP/1.1 200 OK"
+ERROR:assistant:
+Date: 2024-09-04 16:27:05.500313
+Run status: completed
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_BuXhyaAUOV4dWUsxfoMHlDnK/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/assistants/asst_ndwvfyrmD9ACUGBp4o94D3pw "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_b7LqGx0p6ItMxXmhFnBV7aHk/messages "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/threads/thread_b7LqGx0p6ItMxXmhFnBV7aHk/runs "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_b7LqGx0p6ItMxXmhFnBV7aHk/runs/run_ig4l5EnUGcJVixatc2o1lIgV "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_b7LqGx0p6ItMxXmhFnBV7aHk/runs/run_ig4l5EnUGcJVixatc2o1lIgV "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_b7LqGx0p6ItMxXmhFnBV7aHk/runs/run_ig4l5EnUGcJVixatc2o1lIgV "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_b7LqGx0p6ItMxXmhFnBV7aHk/runs/run_ig4l5EnUGcJVixatc2o1lIgV "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_b7LqGx0p6ItMxXmhFnBV7aHk/runs/run_ig4l5EnUGcJVixatc2o1lIgV "HTTP/1.1 200 OK"
+ERROR:assistant:
+Date: 2024-09-04 16:32:43.204891
+Run status: completed
+INFO:httpx:HTTP Request: GET https://api.openai.com/v1/threads/thread_b7LqGx0p6ItMxXmhFnBV7aHk/messages "HTTP/1.1 200 OK"
