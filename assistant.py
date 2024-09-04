@@ -96,6 +96,8 @@ while True:
         #hand it directly to the chatbot identified as the user's nameso
         user_name = input("You: ")
         print("Assistant: Hey, " + user_name + "! How can I help you?")
+        #prompt the user for their question and assign that to user_input
+        user_input = input("You: ")
     else:
         #prompt the user for input
         user_input = input("You: ")
