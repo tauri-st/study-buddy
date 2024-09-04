@@ -95,6 +95,7 @@ while True:
         #the model doesn't always recognize the answer as a name
         #hand it directly to the chatbot identified as the user's nameso
         user_name = input("You: ")
+        print("Assistant: Hey, " + user_name + "! How can I help you?")
     else:
         #prompt the user for input
         user_input = input("You: ")
