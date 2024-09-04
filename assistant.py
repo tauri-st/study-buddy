@@ -6,6 +6,7 @@ import datetime
 import sys
 import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+import re
 
 #Write the log by creating a module level logger to do the logging
 log = logging.getLogger("assistant")
@@ -53,6 +54,9 @@ def status_message(run_status):
             thread_id = thread.id
         )
         message = thread_messages.data[0].content[0].text.value
+        if thread_messages.data[0].content[0].text.annotations:
+            pattern = r'【\d+†source】'
+            message = re.sub(pattern, '', message)
 
     if run.status in ["cancelled", "failed", "expired"]:
         message = "An error has occurred, please try again."
@@ -123,34 +127,3 @@ while True:
     message = status_message(run.status)
 
     print("\nAssistant: " + message + "\n")
-
-    # Use the create and poll SDK helper to create a run and poll the status of
-    # the run until it's in a terminal state.
-
-    #run = client.beta.threads.runs.create_and_poll(
-        #thread_id=thread.id, assistant_id=assistant.id
-    #)
-
-    #messages = list(client.beta.threads.messages.list(thread_id=thread.id, run_id=run.id))
-
-    #message_content = messages[0].content[0].text
-    #annotations = message_content.annotations
-    #annotations = message.annotations
-    #citations = []
-    #for index, annotation in enumerate(annotations):
-        #message.value = message.value.replace(annotation.text, f"[{index}]")
-        #if file_citation := getattr(annotation, "file_citation", None):
-            #cited_file = client.files.retrieve(file_citation.file_id)
-            #citations.append(f"[{index}] {cited_file.filename}")
-
-    #print(message.value)
-    #print("\n".join(citations))
-    #citations = []
-    #for index, annotation in enumerate(annotations):
-        #message.value = message.value.replace(annotation.text, f"[{index}]")
-        #if file_citation := getattr(annotation, "file_citation", None):
-            #cited_file = client.files.retrieve(file_citation.file_id)
-            #citations.append(f"[{index}] {cited_file.filename}")
-
-    #print(message.value)
-    #print("\n".join(citations))
