@@ -30,14 +30,11 @@ assistant = client.beta.assistants.retrieve(
 #exit()
 
 # Update the assistant with the new file
-#updated_assistant = client.beta.assistants.update(
-    #assistant_id = assistant.id,
-    #file_ids = [
-        #curriculum_knowledge.id
-        #"file-rEniBYpngrwuuw2TxtFipWPq",
-        #"file-83ZZjGbBVxyV19FDqb4fIwn7"
-    #]
-#)
+# To make the files accessible to your assistant, update the assistant’s tool_resources with the new vector_store id.
+assistant = client.beta.assistants.update(
+    assistant_id = assistant.id,
+    tool_resources={"file_search": {"vector_store_ids": ["vs_k2nCdJ1xhYkJKkLAU9H7nRx2"]}},
+)
 
 assistant_files = client.beta.assistants.files.list(
     "asst_ndwvfyrmD9ACUGBp4o94D3pw"
