@@ -117,6 +117,15 @@ while True:
         input = user_input
     )
 
+    while moderation_result.results[0].flagged == True:
+        print("Assistant: Sorry, your message violated our community guidelines. Please try a different prompt.")
+    
+        user_input = input("You: ")
+
+        moderation_result = client.moderations.create(
+            input = user_input
+        )
+    
     #print(moderation_result)
     #exit()
     
