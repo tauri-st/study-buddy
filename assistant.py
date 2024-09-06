@@ -113,6 +113,10 @@ while True:
         print("Bye bye now, have a good one!")
         exit()
 
+    moderation_result = client.moderations.create(
+        input = user_input
+    )
+    
     #use the prompt to create a message within the thread
     message = client.beta.threads.messages.create(
         thread_id = thread.id,
