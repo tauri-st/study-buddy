@@ -116,6 +116,9 @@ while True:
     moderation_result = client.moderations.create(
         input = user_input
     )
+
+    print(moderation_result)
+    exit()
     
     #use the prompt to create a message within the thread
     message = client.beta.threads.messages.create(
