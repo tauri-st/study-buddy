@@ -128,7 +128,16 @@ while True:
     
     #print(moderation_result)
     #exit()
-    
+
+    print(moderation_result.results[0].category_scores.violence)
+
+    #Add stricter moderation:
+    #TODO: Decide on a threshold. 
+        #TODO: For testing purposes, start with a number like 0.9 and see if any category scores are below that. 
+        #*You may need to adjust this number to be able to test your logic.
+    #TODO: When you submit a prompt and receive the moderation response object, compare the score of each category to your threshold using a for loop.
+    #TODO: If any category score is below your threshold, ask the user to submit another prompt. You’ll need to figure out how to combine this with your current while loop that checks for the main flag.
+
     #use the prompt to create a message within the thread
     message = client.beta.threads.messages.create(
         thread_id = thread.id,
